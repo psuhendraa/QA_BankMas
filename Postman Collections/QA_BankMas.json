@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "5dacfc58-a63f-4923-99d3-0d7e41edef44",
+		"name": "QA-Bank Mas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create_User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a87e2a09-acd5-46da-ba32-a01dc3ba36ea",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "6df14a3b-827d-4f09-a42c-99735e8aa2fc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bank Mas 1\",\r\n    \"job\": \"Quality Assurance\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "https://reqres.in/api/users",
+				"description": "Create User"
+			},
+			"response": []
+		},
+		{
+			"name": "Ubah_User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "70c4b8c5-eb06-447d-926c-3248d93d4afe",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "a052a6d4-0ed6-4d07-9ead-a573bf87e2ab",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bank Mas 1\",\r\n    \"job\": \"Quality Assurance A\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "https://reqres.in/api/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cf23773c-aaf7-40fb-8484-696f0d8c1da7",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "d04b8f90-202c-412e-98cb-b6e3b564a9ae",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bank Mas 1\",\r\n    \"job\": \"Quality Assurance A\"\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "https://reqres.in/api/users/763"
+			},
+			"response": []
+		}
+	]
+}
